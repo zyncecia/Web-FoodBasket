@@ -1,0 +1,53 @@
+﻿@page
+@model Web_FoodBasket.Pages.Bas.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Account</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Basket.FirstName" class="control-label"></label>
+                <input asp-for="Basket.FirstName" class="form-control" />
+                <span asp-validation-for="Basket.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Basket.LastName" class="control-label"></label>
+                <input asp-for="Basket.LastName" class="form-control" />
+                <span asp-validation-for="Basket.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Basket.ContactNo" class="control-label"></label>
+                <input asp-for="Basket.ContactNo" class="form-control" />
+                <span asp-validation-for="Basket.ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Basket.Gender" class="control-label"></label>
+                <input asp-for="Basket.Gender" class="form-control" />
+                <span asp-validation-for="Basket.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Basket.Address" class="control-label"></label>
+                <input asp-for="Basket.Address" class="form-control" />
+                <span asp-validation-for="Basket.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
